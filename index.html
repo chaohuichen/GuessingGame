@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Guessing Game</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Wendy+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- the MAIN.CSS file is linked here -->
+  </head>
+
+  <body>
+    <!--side balloon-->
+    <div id="ball1" class="balloonSide">
+      <h1>0</h1>
+    </div>
+    <div id="app">
+      <div class="center">
+        <h1 id="maintitle">The Guessing Game</h1>
+        <h3 id="subtitle">Guess a number between 1 - 100 !</h3>
+      </div>
+
+      <div id="guess-feedback" class="center">
+        <h4>You have 5 chances</h4>
+      </div>
+
+      <div class="center">
+        <div id="balloonDiv" class="balloon">
+          <input
+            id="userinput"
+            autofocus="autofocus"
+            placeholder="#"
+            maxlength="3"
+            title="Enter a number"
+          />
+        </div>
+        <br />
+
+        <button id="submit" class="button">Submit</button>
+        <button id="reset" class="button">Play Again</button>
+        <button id="hint" class="button">Hint</button>
+
+        <div id="guesses">
+          <ul id="guessList"></ul>
+        </div>
+      </div>
+    </div>
+    <!--side balloon-->
+    <div id="ball2" class="balloonSide">
+      <h1>100</h1>
+    </div>
+
+    <div id="footer" class="center">
+      <div>
+        <h4>Project By CHAOHUI CHEN</h4>
+      </div>
+    </div>
+
+    <script src="js/guessing-game.js"></script>
+    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+  </body>
+</html>

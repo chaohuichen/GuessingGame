@@ -1,0 +1,218 @@
+/* Write your CSS code in this file */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  display: inline;
+}
+body {
+  background-color: lightskyblue;
+}
+/* For the div that contains our full application/game */
+#app {
+  width: 60%;
+  margin: 50px auto;
+  background-color: lightskyblue;
+}
+/*for the titles*/
+#maintitle {
+  font-size: 500%;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+#subtitle {
+  top: -10%;
+  font-size: 250%;
+}
+
+/*for the feedback*/
+#guess-feedback {
+  font-family: 'Wendy One';
+  font-size: 200%;
+}
+
+/* For the div that contains our input element and button element */
+#input-parent {
+  width: 160px;
+  margin: 5% auto 50px;
+  position: relative;
+}
+
+/* For the input element */
+#userinput {
+  border-radius: 100%;
+  text-align: center;
+  font-size: 80px;
+  border: 10px #008cba;
+  background-color: hsl(215, 50%, 65%);
+  color: whitesmoke;
+  outline: none;
+  font-family: 'Wendy One', sans-serif;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 40px;
+}
+.button {
+  font-size: 200%;
+  font-family: 'Wendy One';
+}
+/* For the buttons submit */
+#submit {
+  background: rgb(28, 184, 65); /* this is a green */
+}
+/*for the butoon hint*/
+#hint {
+  background: rgb(223, 117, 20);
+}
+
+/*for the buttons reset*/
+#reset {
+  background: rgb(202, 60, 60);
+}
+/* For the last div in the project, that says who made the game */
+#footer {
+  width: 100%;
+  border-top: solid 2px black;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Adding the class 'center' will center the text inside the div */
+.center {
+  text-align: center;
+}
+
+/* Add the 'guess' class to each list element (li element) */
+.guesses {
+  display: inline;
+  font-size: 60px;
+  border: 2px solid black;
+  padding: 0 40px;
+  border-radius: 20%;
+
+  font-family: 'Wendy One';
+}
+
+.balloon {
+  display: inline-block;
+  width: 180px;
+  height: 230px;
+  background: hsl(215, 50%, 65%);
+  border-radius: 80%;
+  position: relative;
+  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+  margin: 20px 30px;
+  transition: transform 0.5s ease;
+  z-index: 10;
+}
+.balloon::before {
+  content: '▲';
+  font-size: 20px;
+  color: hsl(215, 30%, 50%);
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -12px;
+  z-index: -100;
+}
+
+#gameOverTitle {
+  color: blue;
+  font-family: 'Wendy One';
+  font-size: 50px;
+  height: 250px;
+  width: 900px;
+
+  line-height: 100px;
+  left: 100px;
+  position: relative;
+}
+
+/* for the side baloon */
+
+.balloonSide {
+  display: inline-block;
+  width: 180px;
+  height: 230px;
+  background: hsl(215, 50%, 65%);
+  border-radius: 80%;
+  position: relative;
+  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+  margin: 20px 30px;
+  transition: transform 0.5s ease;
+  z-index: 10;
+  position: absolute;
+  animation: balloons 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.balloonSide::before {
+  content: '▲';
+  font-size: 20px;
+  color: hsl(215, 30%, 50%);
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -12px;
+  z-index: -100;
+}
+
+.balloonSide:after {
+  display: inline-block;
+  top: 230px;
+  position: absolute;
+  height: 250px;
+  width: 2px;
+  margin: 0 auto;
+  content: '';
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes balloons {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(4deg);
+  }
+}
+
+.balloonSide:nth-child(1) {
+  background: pink;
+  animation-duration: 3.5s;
+}
+.balloonSide:nth-child(1):before {
+  color: pink;
+}
+
+.balloonSide:nth-child(3) {
+  background: lightcoral;
+  animation-duration: 3.5s;
+}
+.balloonSide:nth-child(3):before {
+  color: lightcoral;
+}
+
+#ball1 {
+  top: 20%;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Wendy One';
+}
+#ball2 {
+  right: 5%;
+  top: 20%;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Wendy One';
+}
